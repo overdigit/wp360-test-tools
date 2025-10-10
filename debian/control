@@ -1,0 +1,16 @@
+Source: wp360-test-tools
+Section: misc
+Priority: optional
+Maintainer: Overdigit <info@overdigit.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+#Homepage: <insert the upstream URL, if relevant>
+Rules-Requires-Root: no
+#Vcs-Git: https://salsa.debian.org/debian/wp360-packages.git
+#Vcs-Browser: https://salsa.debian.org/debian/wp360-packages
+
+Package: wp360-test-tools
+Architecture: all
+Maintainer: Overdigit <info@overdigit.com>
+Depends: ${misc:Depends}, bash, raspi-utils-core, screen, lua5.1, htop
+Description: Collection of test tools for the WP360 PLC.
