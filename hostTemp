@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+while true
+do
+  echo -e "HTTP/1.1 200 OK\nRefresh: 1\n\n$(vcgencmd measure_temp)" | nc -l -p 8081 -N >  /dev/null
+done
+

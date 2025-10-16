@@ -1,0 +1,9 @@
+[Unit]
+Name=hostTemp
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/wp360-test-tools/hostTemp
+
+[Install]
+WantedBy=default.target

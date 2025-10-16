@@ -9,5 +9,8 @@ install:
 	install graph.lua $(DESTDIR)$(prefix)/lib/wp360-test-tools
 	install run.screen $(DESTDIR)$(prefix)/lib/wp360-test-tools
 	install run.sh $(DESTDIR)$(prefix)/lib/wp360-test-tools
+	install -d $(DESTDIR)$(prefix)/lib/systemd/system/
+	install hostTemp.service $(DESTDIR)$(prefix)/lib/systemd/system
+	install hostTemp $(DESTDIR)$(prefix)/lib/wp360-test-tools
 
 .PHONY: all install

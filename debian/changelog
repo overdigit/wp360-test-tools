@@ -1,3 +1,9 @@
+wp360-test-tools (1.1.0-1) bookworm; urgency=low
+
+  * Add a crude utility to query cpu temperature via http.
+
+ -- Overdigit <info@overdigit.com>  Thu, 16 Oct 2025 19:12:38 +0200
+
 wp360-test-tools (1.0.0-1) bookworm; urgency=low
 
   * Initial release.
