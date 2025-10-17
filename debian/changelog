@@ -1,3 +1,9 @@
+wp360-test-tools (1.1.0-2) bookworm trixie; urgency=low
+
+  * Release for Trixie.
+
+ -- Overdigit <info@overdigit.com>  Fri, 17 Oct 2025 18:38:53 +0200
+
 wp360-test-tools (1.1.0-1) bookworm; urgency=low
 
   * Add a crude utility to query cpu temperature via http.
