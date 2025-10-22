@@ -1,3 +1,9 @@
+wp360-test-tools (1.1.0-3) bookworm trixie; urgency=low
+
+  * Add netcat-openbsd dependency.
+
+ -- Overdigit <info@overdigit.com>  Wed, 22 Oct 2025 18:54:05 +0200
+
 wp360-test-tools (1.1.0-2) bookworm trixie; urgency=low
 
   * Release for Trixie.
