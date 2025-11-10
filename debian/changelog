@@ -1,3 +1,9 @@
+wp360-test-tools (1.2.2-1) bookworm trixie; urgency=low
+
+  * General service stability improvements to enhance the user's experience.
+
+ -- Overdigit <info@overdigit.com>  Mon, 10 Nov 2025 19:03:03 +0100
+
 wp360-test-tools (1.2.1-1) bookworm trixie; urgency=low
 
   * Delay client closure to avoid connection reset issues.
