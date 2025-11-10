@@ -1,6 +1,21 @@
-#!/usr/bin/env bash
-while true
-do
-  echo -e "HTTP/1.1 200 OK\nRefresh: 1\n\n$(vcgencmd measure_temp)" | nc -l -p 8081 -N >  /dev/null
-done
+#!/usr/bin/env lua
+local socket = require "socket"
+
+local server = socket.bind("0.0.0.0", 8081)
+
+while true do
+  local client = server:accept()
+  if client then
+    --"HTTP/1.1 200 OK\nRefresh: 1\n\n$(vcgencmd measure_temp)\n\n$(pinctrl 26,27 | sed -E 's/^.+ \| //m')"
+    local tp = io.popen("vcgencmd measure_temp", "r")
+    local pp = io.popen("pinctrl 26,27 | sed -E 's/^.+ \\| //m'", "r")
+    local tr = tp:read "*a"
+    local pr = pp:read "*a"
+    tp:close()
+    pp:close()
+    local body = ("%s\n%s"):format(tr, pr)
+    client:send(("HTTP/1.1 200 OK\nRefresh: 1\nConnection: close\nContent-Length: %d\n\n%s"):format(#body, body))
+    client:close()
+  end
+end
 
