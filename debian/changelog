@@ -1,3 +1,9 @@
+wp360-test-tools (1.2.1-1) bookworm trixie; urgency=low
+
+  * Delay client closure to avoid connection reset issues.
+
+ -- Overdigit <info@overdigit.com>  Mon, 10 Nov 2025 11:46:15 +0100
+
 wp360-test-tools (1.2.0-1) bookworm trixie; urgency=low
 
   * Rewrite hostTemp for stability.

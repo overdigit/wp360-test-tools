@@ -15,7 +15,6 @@ while true do
     pp:close()
     local body = ("%s\n%s"):format(tr, pr)
     client:send(("HTTP/1.1 200 OK\nRefresh: 1\nConnection: close\nContent-Length: %d\n\n%s"):format(#body, body))
-    client:close()
   end
 end
 
